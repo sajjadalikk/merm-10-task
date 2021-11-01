@@ -1,0 +1,128 @@
+<%
+
+if(!locals.users){
+
+    locals.users = [];
+
+}
+
+%>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/dashboard-styles.css">
+
+ <!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+<!-- Optional theme -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+
+<!-- Latest compiled and minified JavaScript -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+
+<div class="row">
+
+    <div class="col-lg-12">
+
+        <div class="main-box clearfix">
+
+            <div class="table-responsive">
+
+                <table class="table user-list">
+
+                    <thead>
+
+                        <tr>
+                          
+                            <th><span>Name</span></th>
+                            <th><span>Email</span></th>
+                          
+                            <th>&nbsp;</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <% for(let user of users) {%>
+
+                        <tr>
+                           
+                            <td>
+
+                                <a href="#" class="user-link"><%=user.name%></a>
+
+                            </td>
+
+                            <td>
+
+                                <a href="#"><%=user.email%></a>
+
+                            </td>
+
+                         
+
+                        </tr>
+
+                        <% } %>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <a href="/create"> Add New User</a>
+            <ul class="pagination pull-right">
+
+                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+
+                <li><a href="#">1</a></li>
+
+                <li><a href="#">2</a></li>
+
+                <li><a href="#">3</a></li>
+
+                <li><a href="#">4</a></li>
+
+                <li><a href="#">5</a></li>
+
+                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
